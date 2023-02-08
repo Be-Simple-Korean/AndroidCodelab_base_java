@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tv_intro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/intro_text"
+        android:textSize="28dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/ll_donut"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_intro"
+        android:orientation="horizontal"
+        android:paddingLeft="24dp"
+        android:paddingTop="24dp">
+
+        <ImageView
+            android:id="@+id/iv_donut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onImageClick"
+            android:src="@drawable/donut_circle" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:text="@string/donuts" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_ice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_donut"
+        android:orientation="horizontal"
+        android:paddingLeft="24dp"
+        android:paddingTop="24dp">
+
+        <ImageView
+            android:id="@+id/iv_icecream"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onImageClick"
+            android:src="@drawable/icecream_circle" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:text="@string/ice_cream_sandwiches" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_ice"
+        android:orientation="horizontal"
+        android:paddingLeft="24dp"
+        android:paddingTop="24dp">
+
+        <ImageView
+            android:id="@+id/iv_froyo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onImageClick"
+            android:src="@drawable/froyo_circle" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:text="@string/froyo" />
+    </LinearLayout>
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:onClick="goNext"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="#FB4785"
+        android:src="@drawable/ic_action_name"
+        app:borderWidth="0dp"
+        app:tint="@null" />
+
+
+</RelativeLayout>
