@@ -12,3 +12,7 @@ Activity LifeCycle() 테스트
 ## SupportLibrary
 getIdentifier()를 이용한 리소스의 id를 동적으로 가져오기<br>
 지원 라이브러리를 이용하여 코딩하면 라이브러리를 통해 api레벨 구분 가능
+
+## DroidCafe
+android 기본 컴포넌트 활용<br>
+Manifest에서 parent activity를 지정하여 화면이동하기
