@@ -2,6 +2,8 @@ package com.example.droidcafe;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -53,5 +55,28 @@ public class MainActivity extends AppCompatActivity {
      */
     public void goNext(View view) {
         startActivity(new Intent(this, OrderActivity.class));
+    }
+
+    /**
+     * 버튼 클릭 메소드
+     * @param view
+     */
+    public void showAlert(View view) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("Title");
+        builder.setMessage("Message");
+        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+
+            }
+        });
+        builder.setNegativeButton("CANCEL", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+
+            }
+        });
+        builder.show();
     }
 }

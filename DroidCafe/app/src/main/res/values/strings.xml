@@ -29,6 +29,7 @@
     <string name="cherries">Cherries</string>
     <string name="cookies">Cookies</string>
     <string name="show_toast">SHOW TOAST</string>
+    <string name="btn_alert">ALERT</string>
 
     <string-array name="labels_array">
         <item>Home</item>
