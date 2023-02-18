@@ -16,3 +16,11 @@ getIdentifier()를 이용한 리소스의 id를 동적으로 가져오기<br>
 ## DroidCafe
 android 기본 컴포넌트 활용<br>
 Manifest에서 parent activity를 지정하여 화면이동하기
+
+## RecyclerView
+RecyclerView를 활용하여 데이터 리스트 만들기<br>
+데이터가 추가되는 경우 notifyItemInsert로 추가되는 데이터만 bind()
+  * 나의 경우는 그냥 notifyDataSetChanged()를 썼었는데 이 경우 전체 데이터가 재활용<br>
+  
+클릭리스너의 경우 뷰홀더에서 세팅해줌 
+  * 나의 경우 bind에서 해줬지만 notify()등 데이터가 재활용될때마다 해당 리스너가 다시 세팅됨...
