@@ -29,3 +29,13 @@ RecyclerView를 활용하여 데이터 리스트 만들기<br>
 xml에서 공통 컴포넌트의 속성이 겹치는경우 스타일을 지정하여 한번에 처리<br>
 shape, selector 리소스 사용<br>
 다크모드 적용 및 적용 시 테마 변경이 적용되도록 recreate() 
+
+## CardWithColor
+ItemTouchHelper 
+ * RecyclerView에서 스와이프, 드래그앤 드롭의 터치 액션 사용시 선언<br>
+ TypedArray 
+  * strings.xml의 array 문자열 리스트 가져오기 = getResources().obtainTypedArray(id)<br>
+  * View가 재사용 될 경우 .recycle()을 사용하고 가비지 컬렉션에서 제외시키기 위해 
+ 
+ Collections.swap 
+  * ArrayList의 데이터 스왑
