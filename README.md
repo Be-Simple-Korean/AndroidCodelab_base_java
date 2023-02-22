@@ -33,7 +33,7 @@ shape, selector 리소스 사용<br>
 ## CardWithColor
 ItemTouchHelper 
  * RecyclerView에서 스와이프, 드래그앤 드롭의 터치 액션 사용시 선언<br>
- TypedArray 
+TypedArray 
   * strings.xml의 array 문자열 리스트 가져오기 = getResources().obtainTypedArray(id)<br>
   * View가 재사용 될 경우 .recycle()을 사용하고 가비지 컬렉션에서 제외시키기 위해 
  
