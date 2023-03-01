@@ -2,6 +2,7 @@ package com.example.cardwithcolor;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -60,16 +61,21 @@ public class MainActivity extends AppCompatActivity {
 
     private void initRecyclerView() {
         mRecyclerView = findViewById(R.id.recyclerView);
-        mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-
+        int gridCount = getResources().getInteger(R.integer.grid_column_count);
+//        mRecyclerView.setLayoutManager(new LinearLayoutManager(this);
+        mRecyclerView.setLayoutManager(new GridLayoutManager(this, gridCount));
+        int swipeDirs = 0;
+        if(gridCount < 2){
+            swipeDirs = ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT;
+        }
         mAdapter = new SportsAdapter(this, mSportsData);
         mRecyclerView.setAdapter(mAdapter);
         //RecyclerView에서 스와이프 드래그앤 드롭등의 다양한 터치액션
         ItemTouchHelper helper = new ItemTouchHelper(
                 new ItemTouchHelper.SimpleCallback(//드래그 앤 드롭
                         ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT |
-                                ItemTouchHelper.DOWN | ItemTouchHelper.UP, //스와이프
-                        ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT) {
+                                ItemTouchHelper.DOWN | ItemTouchHelper.UP,swipeDirs //스와이프
+                        ) {
                     @Override
                     public boolean onMove(@NonNull RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder, @NonNull RecyclerView.ViewHolder target) {
                         int from = viewHolder.getAdapterPosition();

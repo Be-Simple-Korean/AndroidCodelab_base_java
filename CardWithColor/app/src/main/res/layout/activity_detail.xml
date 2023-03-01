@@ -7,37 +7,37 @@
         android:layout_height="wrap_content">
 
         <ImageView
-            android:id="@+id/sportsImageDetail"
+            android:id="@+id/tv_sports_image_detail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:adjustViewBounds="true" />
 
         <TextView
-            android:id="@+id/titleDetail"
+            android:id="@+id/tv_title_detail"
             style="@style/TextAppearance.AppCompat.Headline"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignBottom="@id/sportsImageDetail"
+            android:layout_alignBottom="@id/tv_sports_image_detail"
             android:padding="16dp"
             android:text="@string/title_placeholder"
             android:theme="@style/ThemeOverlay.AppCompat.Dark" />
 
         <TextView
-            android:id="@+id/newsTitleDetail"
-            style="@style/TextAppearance.AppCompat.Subhead"
+            android:id="@+id/tv_news_title_detail"
+            style="@style/SportsDetailTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/sportsImageDetail"
+            android:layout_below="@id/tv_sports_image_detail"
             android:padding="16dp"
             android:text="@string/news_placeholder"
             android:textColor="?android:textColorSecondary" />
 
         <TextView
-            android:id="@+id/subTitleDetail"
-            style="@style/TextAppearance.AppCompat.Subhead"
+            android:id="@+id/tv_sub_title_detail"
+            style="@style/SportsDetailTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/newsTitleDetail"
+            android:layout_below="@id/tv_news_title_detail"
             android:padding="16dp"
             android:text="@string/subtitle_detail_text" />
 
