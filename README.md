@@ -20,10 +20,10 @@ Manifest에서 parent activity를 지정하여 화면이동하기
 ## RecyclerView
 RecyclerView를 활용하여 데이터 리스트 만들기<br>
 데이터가 추가되는 경우 notifyItemInsert로 추가되는 데이터만 bind()
-  * 나의 경우는 그냥 notifyDataSetChanged()를 썼었는데 이 경우 전체 데이터가 재활용<br>
+-> 나의 경우는 그냥 notifyDataSetChanged()를 썼었는데 이 경우 전체 데이터가 재활용<br>
   
 클릭리스너의 경우 뷰홀더에서 세팅해줌 
-  * 나의 경우 bind에서 해줬지만 notify()등 데이터가 재활용될때마다 해당 리스너가 다시 세팅됨...
+-> 나의 경우 bind에서 해줬지만 notify()등 데이터가 재활용될때마다 해당 리스너가 다시 세팅됨...
 
 ## ScoreKeeper
 xml에서 공통 컴포넌트의 속성이 겹치는경우 스타일을 지정하여 한번에 처리<br>
@@ -41,3 +41,6 @@ TypedArray
  
  Collections.swap 
   * ArrayList의 데이터 스왑
+  
+화면의 orientation 별 폴더를 만들고 각 폴더에 value파일을 생성하여 액티비티에서 해당 파일의 데이터를 화면에 맞게 읽어오게 할 수 있음<br>
+strings.xml 을 언어에 맞게 세팅
