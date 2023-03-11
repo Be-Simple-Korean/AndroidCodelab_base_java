@@ -50,5 +50,14 @@ strings.xml 을 언어에 맞게 세팅
 커스텀 리시버로 데이터 전달 및 커스텀 액션 전달<br>
 리시버에서 액션에 따른 분기처리<br>
 
+
+
 ## NotifyMe
 Notification(알림)
+
+## StandUp
+AlarmManager
+  * setInexactRepeating() = 반복 알람 설정
+  * 알림 유형
+    * ELAPSED_REALTIME_WAKEUP = 기기를 부팅한 후 지정된 시간이 경과하면 실행
+    * RTC_WAKEUP = 지정된 시간에 기기의 절전 모드를 해제하여 실행
